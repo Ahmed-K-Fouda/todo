@@ -1,0 +1,14 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F1ECE6;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header h1 span {
+    color: #D98326;
+}

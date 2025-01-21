@@ -68,3 +68,127 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!--
+import { useState } from "react";
+
+function App() {
+  // States for managing the inputs and the list of items
+  const [quantity, setQuantity] = useState(); // State to store the quantity (number)
+  const [itemName, setItemName] = useState("Item You Need"); // State to store the item name
+  const [itemsList, setItemsList] = useState([]); // State to store the list of items
+  const [editIndex, setEditIndex] = useState(null); // State to track the index of the item being edited
+  const [isEditing, setIsEditing] = useState(false); // State to toggle the edit mode
+
+  // Function to add a new item to the list
+  function handleAddItem() {
+    setItemsList([...itemsList, { quantity, itemName }]); // Add a new object to the list
+    setQuantity(""); // Clear the quantity input
+    setItemName(""); // Reset the item name input
+  }
+
+  // Function to sort the items list in descending order based on quantity
+  function handleSort() {
+    setItemsList([...itemsList].sort((a, b) => b.quantity - a.quantity)); // Sort a copy of the list
+  }
+
+  // Function to delete an item from the list by its index
+  function handleDelete(index) {
+    setItemsList(itemsList.filter((_, i) => i !== index)); // Filter out the item with the matching index
+  }
+
+  // Function to enter edit mode for a specific item
+  function handleEdit(index) {
+    setEditIndex(index); // Set the index of the item to be edited
+    setItemName(itemsList[index].itemName); // Pre-fill the input with the current item name
+    setQuantity(itemsList[index].quantity);
+    setIsEditing(true); // Enable edit mode
+  }
+
+  // Function to save the updated item
+  function handleSave() {
+    const updatedList = itemsList.map((item, i) => {
+      if (i === editIndex) {
+        return { ...item, itemName, quantity }; // Update the item with the new name
+      }
+      return item; // Keep the rest of the items unchanged
+    });
+    setItemsList(updatedList); // Update the list with the modified item
+    setEditIndex(null); // Exit edit mode
+    setIsEditing(false); // Hide the edit input
+  }
+
+  return (
+    <>
+      {/* Input section to add new items */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <p>What Do You Want</p>
+        {/* Input for quantity */}
+        <input
+          type="number"
+          placeholder="Quantity"
+          value={quantity}
+          onChange={(e) => setQuantity(Number(e.target.value))}
+          min={1}
+        />
+        {/* Input for item name */}
+        <input
+          type="text"
+          placeholder={itemName}
+          onChange={(e) => setItemName(e.target.value)}
+        />
+        {/* Button to add item */}
+        <button onClick={handleAddItem}>Add</button>
+        {/* Dropdown to sort items */}
+        <select onChange={handleSort}>
+          <option>Sorting</option>
+          <option>Sort by Quantity</option>
+        </select>
+      </div>
+
+      {/* Display the list of items */}
+      <div>
+        <h1>Items</h1>
+        {itemsList.map((item, index) => (
+          <ul key={index}>
+            {/* Display item details */}
+            <li>Quantity: {item.quantity}</li>
+            <li>Item Name: {item.itemName}</li>
+            {/* Delete button */}
+            <button onClick={() => handleDelete(index)}>Delete</button>
+            {/* Edit button */}
+            <button onClick={() => handleEdit(index)}>Edit</button>
+            {/* Edit input and save button */}
+            {editIndex === index && isEditing && (
+              <>
+                <input
+                  type="text"
+                  value={itemName}
+                  onChange={(e) => setItemName(e.target.value)}
+                />
+                <input
+                  type="text"
+                  value={quantity}
+                  onChange={(e) => setQuantity(e.target.value)}
+                />
+                <button onClick={handleSave}>Save</button>
+              </>
+            )}
+          </ul>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+
+ -->
+

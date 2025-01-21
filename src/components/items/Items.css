@@ -1,0 +1,31 @@
+.update-section {
+    margin: 0 12px
+}
+
+.update-section input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    border: 1px solid #D98326;
+}
+
+.update-section button {
+    margin: 0 12px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #1a6c1a;
+}
+
+
+
+.update-section button:last-child {
+    background: darkred;
+
+}
+

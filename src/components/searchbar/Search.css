@@ -1,0 +1,22 @@
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #F1ECE6;
+    border-radius: 30px;
+    width: 75vw;
+    margin: 20px auto;
+    height: 50px;
+    position: relative;
+}
+
+.text-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    background: transparent;
+    font-size: 16px;
+    color: #000;
+    margin-left: 15px;
+}

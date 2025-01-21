@@ -1,0 +1,89 @@
+.todo {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    margin: 10px auto;
+    height: 589px;
+    background: #F1ECE6;
+    border-radius: 50px;
+    position: relative;
+}
+
+.todo .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+.todo .items div {
+    display: flex;
+    align-items: center;
+}
+
+.todo .items div span {
+    font-size: 28px;
+}
+
+.todo .items input[type='checkbox'] {
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    margin: 0px 20px;
+    border-radius: 50%;
+    appearance: none;
+    border: 2px solid #D98326;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo .items input[type='checkbox']:checked {
+    border: 2px solid #D98326;
+    /* background-color: #D98326; */
+}
+
+.todo .items input[type='checkbox']:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D98326;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+hr {
+    border: 1px solid #76B7CD;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.btn-remove {
+    color: #B30B04;
+    margin: 0 18px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.btn-update {
+    color: #D98326;
+    margin: 0 18px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.clear {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: #D98326;
+    font-size: 20px;
+    cursor: pointer;
+}

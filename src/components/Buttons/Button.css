@@ -1,0 +1,16 @@
+.add-btn {
+    background: #76B7CD;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: skyblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+
+}
